@@ -4,7 +4,7 @@ require 'simplecov'
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
                                                            SimpleCov::Formatter::HTMLFormatter
                                                           ]
-SimpleCov.coverage_dir(File.join("..","..","..",dir,"coverage"))
+SimpleCov.coverage_dir(File.join("..","..","..",ENV['CIRCLE_ARTIFACTS'],"coverage"))
 SimpleCov.start
 
 require 'rspec'
